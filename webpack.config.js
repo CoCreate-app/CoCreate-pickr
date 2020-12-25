@@ -12,7 +12,7 @@ module.exports = {
 
   // Path to your entry point. From this file Webpack will begin his work
   entry: {
-    'CoCreate-pickr': './CoCreate-pickr/src/CoCreate-pickr.js',
+    'CoCreate-pickr': './src/CoCreate-pickr.js',
   },
 
   // Path and filename of your result bundle.
