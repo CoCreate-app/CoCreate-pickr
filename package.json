@@ -1,20 +1,21 @@
 {
-  "name": "CoCreate-boilerplate",
+  "name": "CoCreate-pickr",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "npx webpack --config webpack.config.js --watch",
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js"
   },
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-boilerplate.git"
+    "url": "git+https://github.com/CoCreate-app/CoCreate-pickr.git"
   },
   "author": "Frank Pagan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-boilerplate/issues"
+    "url": "https://github.com/CoCreate-app/CoCreate-pickr/issues"
   },
-  "homepage": "https://github.com/CoCreate-app/CoCreate-boilerplate#readme"
+  "homepage": "https://github.com/CoCreate-app/CoCreate-pickr#readme"
 }

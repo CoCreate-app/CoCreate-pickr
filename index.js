@@ -1,0 +1,1 @@
+import './CoCreate-pickr/src/CoCreate-pickr.js';
