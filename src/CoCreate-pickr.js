@@ -9,7 +9,7 @@ let config = {
     defaultRepresentation: 'HEX',
     inline: false,
     comparison: true,
-    default: '#ffffff',
+    default: '#999999',
     swatches: [
         'rgba(244, 67, 54, 1)',
         'rgba(233, 30, 99, 0.95)',
@@ -48,8 +48,8 @@ let config = {
     }
 }
 
-const eventHandler = root => (instance,e, pickr) => {
-    if (instance) {
+const eventHandler = root => (instance, e, pickr) => {
+    if (instance && !CoCreate.pickr.disabledEvent) {
         let event = new CustomEvent("input", {
             bubbles: true,
             detail: {
@@ -60,45 +60,56 @@ const eventHandler = root => (instance,e, pickr) => {
         root.dispatchEvent(event);
     }
 }
+let refs = new Map();
+const CoCreatePickr = { refs };
 
-export const refs = new Map();
-
-CoCreateObserver.add({
+CoCreate.observer.add({
     name: "pickr",
     observe: ["childList"],
     // include: ".color-picker",
-    task: (mutation) => {
+    callback: (mutation) => {
         let colorPickers = mutation.target.querySelectorAll('.color-picker');
-
-
         if (colorPickers.length)
-            colorPickers.forEach(p => {
-                // pick attributes
-                let ccAttributes = Array.from(p.attributes).filter(att => att.name.startsWith('data-style'))
-
-                // if not for cocreate
-                if (!ccAttributes.length) return;
-
-                // set element
-                config.el = p;
-
-                // init and get root
-                let pickr = Pickr.create(config);
-                let root = pickr.getRoot().root;
-
-                // write attributes
-                ccAttributes.forEach(att => {
-                    root.setAttribute(att.name, att.value);
-                })
-
-                //set ref
-                refs.set(root, pickr)
-
-                //set events
-                // pickr.on('save', eventHandler(root))
-                pickr.on('change', eventHandler(root))
-            })
-
-
+            colorPickers.forEach(p => createPickr(p))
     },
 })
+
+window.addEventListener('load', () => {
+    let colorPickers = document.querySelectorAll('.color-picker');
+    if (colorPickers.length)
+        colorPickers.forEach(p => createPickr(p))
+})
+
+
+
+
+function createPickr(p) {
+
+    // pick attributes
+    let ccAttributes = Array.from(p.attributes).filter(att => att.name.startsWith('data-style'))
+
+    // if not for cocreate
+    if (!ccAttributes.length) return;
+
+    // set element
+    config.el = p;
+
+    // init and get root
+    let pickr = Pickr.create(config);
+    let root = pickr.getRoot().root;
+
+    // write attributes
+    ccAttributes.forEach(att => {
+        root.setAttribute(att.name, att.value);
+    })
+
+    //set ref
+    refs.set(root, pickr)
+
+    //set events
+    // pickr.on('save', eventHandler(root))
+    pickr.on('change', eventHandler(root))
+
+}
+
+export default CoCreatePickr;

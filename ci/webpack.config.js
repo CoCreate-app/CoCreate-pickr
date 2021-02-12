@@ -12,14 +12,18 @@ module.exports = {
 
   // Path to your entry point. From this file Webpack will begin his work
   entry: {
-    'CoCreate-pickr': './src/CoCreate-pickr.js',
+    'CoCreate-boilerplate': './src/CoCreate-boilerplate.js',
   },
 
-  // Path and filename of your result bundle.
+ // Path and filename of your result bundle.
   // Webpack will bundle all JavaScript into this file
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: isProduction ? '[name].min.js' : '[name].js', 
+    filename: isProduction ? '[name].min.js' : '[name].js',
+    libraryTarget: 'umd',
+    libraryExport: 'default',
+    library: ['CoCreate', 'boilerplate'],
+    globalObject: "this",
   },
 
   // Default mode for Webpack is production.
@@ -29,15 +33,16 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
   module: {
     rules: [{
-      test: /\.js$/,
-      exclude: /(node_modules)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
-      }
-    }]
+      },
+    ]
   },
 
   // add source map
@@ -52,12 +57,5 @@ module.exports = {
       },
     })],
   },
-  // plugins: [
-  //   new CleanWebpackPlugin(),
-  //   new HtmlWebpackPlugin({
-  //     title: 'My Builder',
-  //     template: './CoCreate-builder/demo/CoCreate-builder.html',
-  //     filename: 'builder.html'
-  //   })
-  // ]
+
 };
