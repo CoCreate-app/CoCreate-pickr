@@ -63,7 +63,7 @@ const eventHandler = root => (instance, e, pickr) => {
 let refs = new Map();
 const CoCreatePickr = { refs };
 
-CoCreate.observer.add({
+CoCreate.observer.init({
     name: "pickr",
     observe: ["childList"],
     // include: ".color-picker",
