@@ -1,5 +1,5 @@
 import Pickr from '@simonwep/pickr';
-
+import observer from '../../../CoCreate-components/CoCreate-observer/src'
 
 // Simple example, see optional options for more configuration.
 let config = {
@@ -49,6 +49,7 @@ let config = {
 }
 
 const eventHandler = root => (instance, e, pickr) => {
+    //todofix: what is pickr.disabledEvent??
     if (instance && !CoCreate.pickr.disabledEvent) {
         let event = new CustomEvent("input", {
             bubbles: true,
@@ -63,14 +64,16 @@ const eventHandler = root => (instance, e, pickr) => {
 let refs = new Map();
 const CoCreatePickr = { refs };
 
-CoCreate.observer.init({
+observer.init({
     name: "pickr",
     observe: ["childList"],
-    // include: ".color-picker",
+    include: ".color-picker",
     callback: (mutation) => {
-        let colorPickers = mutation.target.querySelectorAll('.color-picker');
-        if (colorPickers.length)
-            colorPickers.forEach(p => createPickr(p))
+        // let colorPickers = mutation.target.querySelectorAll('.color-picker');
+        // if (colorPickers.length)
+        //     colorPickers.forEach(p => createPickr(p))
+        createPickr(mutation.target)
+       
     },
 })
 
