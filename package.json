@@ -20,7 +20,9 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -33,7 +35,9 @@
   },
   "author": "Frank Pagan",
   "license": "MIT",
-  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-pickr/issues" },
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-pickr/issues"
+  },
   "homepage": "https://github.com/CoCreate-app/CoCreate-pickr",
   "funding": {
     "type": "GitHub Sponsors ❤",
@@ -54,5 +58,8 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.1"
   },
-  "dependencies": { "@simonwep/pickr": "^1.8.0", "@cocreate/docs": "^1.0.3" }
+  "dependencies": {
+    "@simonwep/pickr": "^1.8.0",
+    "@cocreate/docs": "^1.0.3"
+  }
 }
