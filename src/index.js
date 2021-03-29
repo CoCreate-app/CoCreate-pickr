@@ -1,5 +1,5 @@
 import Pickr from '@simonwep/pickr';
-import observer from '../../../CoCreate-components/CoCreate-observer/src'
+import observer from '@cocreate/observer/src'
 
 // Simple example, see optional options for more configuration.
 let config = {
