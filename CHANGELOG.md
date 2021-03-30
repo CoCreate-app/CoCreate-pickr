@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.1...v1.1.2) (2021-03-30)
+
+
+### Bug Fixes
+
+* import paths using npm ([8236662](https://github.com/CoCreate-app/CoCreate-pickr/commit/8236662f8c752ddfc27104505c8f9e96ab1d6dd7))
+
 ## [1.1.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.0...v1.1.1) (2021-03-29)
 
 
