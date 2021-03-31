@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.2...v1.1.3) (2021-03-31)
+
+
+### Bug Fixes
+
+* remove yarn.lock and package-lock.json ([e1cd14f](https://github.com/CoCreate-app/CoCreate-pickr/commit/e1cd14fd66f03828571503b14c3f1097ad0c29b0))
+
 ## [1.1.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.1...v1.1.2) (2021-03-30)
 
 
