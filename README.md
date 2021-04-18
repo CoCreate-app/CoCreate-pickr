@@ -9,7 +9,7 @@ A simple pickr component in vanilla javascript. Easily configured using HTML5 da
 
 ![CoCreate-pickr](https://cdn.cocreate.app/docs/CoCreate-pickr.gif)
 
-## [Docs & Demo](https://cocreate.app/docs/clone)
+## [Docs & Demo](https://cocreate.app/docs/pickr)
 
 For a complete guide and working demo refer to the [doumentation](https://cocreate.app/docs/pickr)
 
