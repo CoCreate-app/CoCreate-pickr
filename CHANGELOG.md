@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.3...v1.1.4) (2021-04-19)
+
+
+### Bug Fixes
+
+* ci and build process ([990d24f](https://github.com/CoCreate-app/CoCreate-pickr/commit/990d24f41a58ffa6acec8dee59e8bd72248fe4c2))
+* npm publish and cdn deployment ([226f649](https://github.com/CoCreate-app/CoCreate-pickr/commit/226f649faa0327bdea740116520c12bd8da4812b))
+
 ## [1.1.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.2...v1.1.3) (2021-03-31)
 
 
