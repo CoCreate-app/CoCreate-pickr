@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.4...v1.1.5) (2021-04-23)
+
+
+### Bug Fixes
+
+* readme and documentation. Removed securitykeys ([7827e95](https://github.com/CoCreate-app/CoCreate-pickr/commit/7827e954d9ee8ac36da6d00589e4863a8c04d29c))
+
 ## [1.1.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.3...v1.1.4) (2021-04-19)
 
 
