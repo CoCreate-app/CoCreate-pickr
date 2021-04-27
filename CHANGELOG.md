@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.5...v1.1.6) (2021-04-27)
+
+
+### Bug Fixes
+
+* Update to readme, demo, added cdn scripts ([6dcc65c](https://github.com/CoCreate-app/CoCreate-pickr/commit/6dcc65cb32cdc075b2dfc83806fd17436efb0d92))
+
 ## [1.1.5](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.4...v1.1.5) (2021-04-23)
 
 
