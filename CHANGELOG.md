@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.6...v1.1.7) (2021-04-27)
+
+
+### Bug Fixes
+
+* add host in docs ([a978f81](https://github.com/CoCreate-app/CoCreate-pickr/commit/a978f81e581214722d859539499a13c8eb4dd0df))
+
 ## [1.1.6](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.5...v1.1.6) (2021-04-27)
 
 
