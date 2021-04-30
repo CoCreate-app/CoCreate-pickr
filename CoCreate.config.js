@@ -10,7 +10,7 @@ module.exports = {
             "path": "./docs/index.html",
             "collection": "files",
             "document_id": "60298d60e979fb17407e25bd",
-            "key": "html",
+            "key": "src",
             "data":{
                 "name": "pickr Doc",
                 "domains": ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
