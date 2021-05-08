@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.7...v1.1.8) (2021-05-08)
+
+
+### Bug Fixes
+
+* add css auto parse and save to docs. ([6ce103f](https://github.com/CoCreate-app/CoCreate-pickr/commit/6ce103fcf36884e9b90d8ae8baad239ffcdc078c))
+
 ## [1.1.7](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.6...v1.1.7) (2021-04-27)
 
 
