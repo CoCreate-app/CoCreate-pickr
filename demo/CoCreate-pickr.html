@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css" />
 </head>
 
 <body>
-<div class="color-picker" data-style="style" data-style-sync="color"> test</div> 
+    <div class="color-picker" data-style="style" data-style-sync="color"> test</div>
 
 
 </body>
-    <script>
-        var config = {
-            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-                        organization_Id: '5de0387b12e200ea63204d6c'
-        }
-    </script>
-    
-    <script defer src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-   
-    <script defer src="https://server.cocreate.app/CoCreate-plugins/CoCreate-pickr/dist/CoCreate-pickr.js"></script>
+<script>
+    var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        organization_Id: '5de0387b12e200ea63204d6c',
+        host: 'wss://server.cocreate.app:8088'
+    }
+</script>
+
+<script defer src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
+<script defer src="../dist/CoCreate-pickr.js"></script>
 
 </html>
