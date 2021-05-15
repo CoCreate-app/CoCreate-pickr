@@ -10,7 +10,7 @@ let config = {
     defaultRepresentation: 'HEX',
     inline: false,
     comparison: true,
-    // default: '#999999',
+    default: '#999999',
     swatches: [
         'rgba(244, 67, 54, 1)',
         'rgba(233, 30, 99, 0.95)',
@@ -49,43 +49,40 @@ let config = {
     }
 }
 
-const eventHandler = root => (instance, e, pickr) => {
-    //todofix: what is pickr.disabledEvent??
-    if (instance && !CoCreate.pickr.disabledEvent) {
-        let event = new CustomEvent("input", {
-            bubbles: true,
-            detail: {
-                color: instance.toHEXA().toString(),
-            },
-        });
-        pickr.setColor(instance.toHEXA().toString())
-        root.dispatchEvent(event);
-        saveColor(instance.toHEXA().toString());
-    }
-}
+// const eventHandler = root => (instance, e, pickr) => {
+//     //todofix: what is pickr.disabledEvent??
+//     if (instance && !CoCreate.pickr.disabledEvent) {
+//         let event = new CustomEvent("input", {
+//             bubbles: true,
+//             detail: {
+//                 color: instance.toHEXA().toString(),
+//             },
+//         });
+//         pickr.setColor(instance.toHEXA().toString())
+//         root.dispatchEvent(event);
+//         saveColor(instance.toHEXA().toString());
+//     }
+// }
 
-const saveColor = (color) => {
-    let pickrs = document.querySelectorAll('[data-collection][data-document_id]');
+// const saveColor = (color) => {
+//     let pickrs = document.querySelectorAll('[data-collection][data-document_id]');
 
-    for (let pickr of pickrs) {
+//     for (let pickr of pickrs) {
 
-        const collection = pickr.getAttribute('data-collection');
-        let name = pickr.getAttribute('name');
-        const document_id = pickr.getAttribute('data-document_id');
+//         const collection = pickr.getAttribute('data-collection');
+//         let name = pickr.getAttribute('name');
+//         const document_id = pickr.getAttribute('data-document_id');
 
-        crud.updateDocument({
-            collection,
-            document_id,
-            upsert: true,
-            data: {
-                [name]: color
-            },
-            // metadata: 'pickr-select',
-            broadcast_sender: true,
-            broadcast: true
-        });
-    }
-}
+//         crud.updateDocument({
+//             collection,
+//             document_id,
+//             upsert: true,
+//             data: {
+//                 [name]: color,
+//             },
+//         });
+//     }
+// }
 
 let refs = new Map();
 const CoCreatePickr = { refs };
@@ -105,47 +102,20 @@ observer.init({
 
 window.addEventListener('load', () => {
     let colorPickers = document.querySelectorAll('.color-picker');
-    if (colorPickers.length) {
+    if (colorPickers.length)
         colorPickers.forEach(p => createPickr(p))
-    }
-
 })
 
-// crud.listen('updateDocument', function(data) {
-//     console.log("hello")
 
-//     if (data.metadata == 'pickr-select') {
-//         console.log("hello")
 
-//         let pickrs = document.querySelectorAll('.color-picker');
-//         for (let pickr of pickrs) {
-//             CoCreatePickr.refs.get(pickr).setColor(data.data.color);
-//         }
-//     }
-// })
 
-async function createPickr(p) {
+function createPickr(p) {
 
     // pick attributes
     let ccAttributes = Array.from(p.attributes).filter(att => att.name.startsWith('data') || att.name.startsWith('name'))
 
     // if not for cocreate
-    if (!ccAttributes.length) return;
-
-    if (p.getAttribute('data-document_id') !== '') {
-        let collection = p.getAttribute('data-collection');
-        let document_id = p.getAttribute('data-document_id');
-        let unique = Date.now();
-
-        crud.readDocument({ collection: collection, document_id: document_id, event: unique });
-
-        let { data: responseData, metadata } = await crud.listenAsync(unique);
-
-
-        if (responseData) {
-            config.default = responseData.color;
-        }
-    }
+    // if (!ccAttributes.length) return;
 
     // set element
     config.el = p;
@@ -164,7 +134,7 @@ async function createPickr(p) {
 
     //set events
     // pickr.on('save', eventHandler(root))
-    pickr.on('change', eventHandler(root))
+    // pickr.on('change', eventHandler(root))
 
 }
 
