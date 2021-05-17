@@ -60,31 +60,26 @@ const eventHandler = root => (instance, e, pickr) => {
         });
         pickr.setColor(instance.toHEXA().toString())
         root.dispatchEvent(event);
-        saveColor(instance.toHEXA().toString());
     }
 }
 
-const saveColor = (color) => {
-    let pickrs = document.querySelectorAll('[data-collection][data-document_id]');
+const saveColor = (color, element) => {
 
-    for (let pickr of pickrs) {
+    const collection = element.getAttribute('data-collection');
+    let name = element.getAttribute('name');
+    const document_id = element.getAttribute('data-document_id');
 
-        const collection = pickr.getAttribute('data-collection');
-        let name = pickr.getAttribute('name');
-        const document_id = pickr.getAttribute('data-document_id');
-
-        crud.updateDocument({
-            collection,
-            document_id,
-            upsert: true,
-            data: {
-                [name]: color
-            },
-            // metadata: 'pickr-select',
-            broadcast_sender: true,
-            broadcast: true
-        });
-    }
+    crud.updateDocument({
+        collection,
+        document_id,
+        upsert: true,
+        data: {
+            [name]: color
+        },
+        // metadata: 'pickr-select',
+        broadcast_sender: true,
+        broadcast: true
+    });
 }
 
 let refs = new Map();
@@ -163,8 +158,11 @@ async function createPickr(p) {
     refs.set(root, pickr)
 
     //set events
-    // pickr.on('save', eventHandler(root))
     pickr.on('change', eventHandler(root))
+    pickr.on('changestop', (source, instance) => {
+        console.log(instance, source)
+        saveColor(instance.getColor().toHEXA().toString(), instance.options.el);
+    })
 
 }
 
