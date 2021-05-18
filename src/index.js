@@ -72,13 +72,11 @@ const saveColor = (color, element) => {
     crud.updateDocument({
         collection,
         document_id,
-        upsert: true,
+        name,
+        upsert: true, // creates a documentid if one does not exist
         data: {
             [name]: color
         },
-        // metadata: 'pickr-select',
-        broadcast_sender: true,
-        broadcast: true
     });
 }
 
@@ -106,18 +104,16 @@ window.addEventListener('load', () => {
 
 })
 
-// crud.listen('updateDocument', function(data) {
-//     console.log("hello")
+crud.listen('updateDocument', function(data) {
+    console.log("updateDocument received", data.data[data.name])
 
-//     if (data.metadata == 'pickr-select') {
-//         console.log("hello")
-
-//         let pickrs = document.querySelectorAll('.color-picker');
-//         for (let pickr of pickrs) {
-//             CoCreatePickr.refs.get(pickr).setColor(data.data.color);
-//         }
-//     }
-// })
+    let pickrs = document.querySelectorAll('.pickr[data-collection="' + data.collection + '"][data-document_id="' + data.document_id + '"][name="' + data.name + '"]');
+    // if (data.metadata == 'pickr-select') {
+    for (let pickr of pickrs) {
+        CoCreatePickr.refs.get(pickr).setColor(data.data[data.name]);
+    }
+    // }
+})
 
 async function createPickr(p) {
 
@@ -130,6 +126,7 @@ async function createPickr(p) {
     if (p.getAttribute('data-document_id') !== '') {
         let collection = p.getAttribute('data-collection');
         let document_id = p.getAttribute('data-document_id');
+        let name = p.getAttribute('name');
         let unique = Date.now();
 
         crud.readDocument({ collection: collection, document_id: document_id, event: unique });
@@ -138,7 +135,7 @@ async function createPickr(p) {
 
 
         if (responseData) {
-            config.default = responseData.color;
+            config.default = responseData[name];
         }
     }
 
@@ -160,7 +157,10 @@ async function createPickr(p) {
     //set events
     pickr.on('change', eventHandler(root))
     pickr.on('changestop', (source, instance) => {
-        console.log(instance, source)
+        saveColor(instance.getColor().toHEXA().toString(), instance.options.el);
+    })
+
+    pickr.on('swatchselect', (source, instance) => {
         saveColor(instance.getColor().toHEXA().toString(), instance.options.el);
     })
 
