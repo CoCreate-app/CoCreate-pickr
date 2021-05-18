@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.8...v1.1.9) (2021-05-18)
+
+
+### Bug Fixes
+
+* removed package.lock file and fix bug doing multiple crud request ([73c4728](https://github.com/CoCreate-app/CoCreate-pickr/commit/73c472846ebb7edf762c97a4ccfa772497c59d92))
+
 ## [1.1.8](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.7...v1.1.8) (2021-05-08)
 
 
