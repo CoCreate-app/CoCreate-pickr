@@ -91,7 +91,11 @@ observer.init({
         // let colorPickers = mutation.target.querySelectorAll('.color-picker');
         // if (colorPickers.length)
         //     colorPickers.forEach(p => createPickr(p))
-        createPickr(mutation.target)
+
+        mutation.target.querySelectorAll('.color-picker').forEach(el => {
+            createPickr(el)
+        })
+
 
     },
 })
@@ -128,10 +132,15 @@ async function createPickr(p) {
         let document_id = p.getAttribute('data-document_id');
         let name = p.getAttribute('name');
         let unique = Date.now();
+        try {
+            crud.readDocument({ collection: collection, document_id: document_id, event: unique });
 
-        crud.readDocument({ collection: collection, document_id: document_id, event: unique });
+            let { data: responseData, metadata } = await crud.listenAsync(unique);
 
-        let { data: responseData, metadata } = await crud.listenAsync(unique);
+        }
+        catch (err) {
+            console.error(err)
+        }
 
 
         if (responseData) {
