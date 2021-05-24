@@ -50,9 +50,10 @@ let config = {
     }
 }
 
+let disabledEvent;
 const eventHandler = root => (instance, e, pickr) => {
     //todofix: what is pickr.disabledEvent??
-    if (instance && !CoCreate.pickr.disabledEvent) {
+    if (instance && !disabledEvent) {
         let event = new CustomEvent("input", {
             bubbles: true,
             detail: {
@@ -82,7 +83,7 @@ const saveColor = (color, element) => {
 }
 
 let refs = new Map();
-const CoCreatePickr = { refs };
+
 
 observer.init({
     name: "pickr",
@@ -167,5 +168,5 @@ async function createPickr(p) {
     })
 
 }
-
+const CoCreatePickr = { refs, disabledEvent };
 export default CoCreatePickr;
