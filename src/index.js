@@ -1,7 +1,8 @@
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer'
 import crud from '@cocreate/crud-client'
-
+import                                 '../node_modules/@simonwep/pickr/dist/themes/monolith.min.css';
+// /public/CoCreate-plugins/CoCreate-pickr/node_modules/@simonwep/pickr/dist/themes/monolith.min.css
 // Simple example, see optional options for more configuration.
 let config = {
     el: null, // will be replaced in observer
@@ -91,11 +92,8 @@ observer.init({
         // let colorPickers = mutation.target.querySelectorAll('.color-picker');
         // if (colorPickers.length)
         //     colorPickers.forEach(p => createPickr(p))
-
-        mutation.target.querySelectorAll('.color-picker').forEach(el => {
-            createPickr(el)
-        })
-
+        if(mutation.target.matches('.color-picker'))
+            createPickr(mutation.target);
 
     },
 })
@@ -127,26 +125,21 @@ async function createPickr(p) {
     // if not for cocreate
     if (!ccAttributes.length) return;
 
-    if (p.getAttribute('data-document_id') !== '') {
-        let collection = p.getAttribute('data-collection');
-        let document_id = p.getAttribute('data-document_id');
-        let name = p.getAttribute('name');
-        let unique = Date.now();
-        try {
-            crud.readDocument({ collection: collection, document_id: document_id, event: unique });
+    // if (p.getAttribute('data-document_id') !== '') {
+    //     let collection = p.getAttribute('data-collection');
+    //     let document_id = p.getAttribute('data-document_id');
+    //     let name = p.getAttribute('name');
+    //     let unique = Date.now();
 
-            let { data: responseData, metadata } = await crud.listenAsync(unique);
+    //     crud.readDocument({ collection: collection, document_id: document_id, event: unique });
 
-        }
-        catch (err) {
-            console.error(err)
-        }
+    //     let { data: responseData, metadata } = await crud.listenAsync(unique);
 
 
-        if (responseData) {
-            config.default = responseData[name];
-        }
-    }
+    //     if (responseData) {
+    //         config.default = responseData[name];
+    //     }
+    // }
 
     // set element
     config.el = p;
