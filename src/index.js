@@ -90,11 +90,9 @@ observer.init({
     observe: ["childList"],
     include: ".color-picker",
     callback: (mutation) => {
-        // let colorPickers = mutation.target.querySelectorAll('.color-picker');
-        // if (colorPickers.length)
-        //     colorPickers.forEach(p => createPickr(p))
-        if (mutation.target.matches('.color-picker'))
-            createPickr(mutation.target);
+        let colorPickers = mutation.target.querySelectorAll('.color-picker');
+        if (colorPickers.length)
+            colorPickers.forEach(p => createPickr(p))
 
     },
 })
