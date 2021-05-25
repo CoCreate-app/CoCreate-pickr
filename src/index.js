@@ -1,7 +1,7 @@
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer'
 import crud from '@cocreate/crud-client'
-import                                 '../node_modules/@simonwep/pickr/dist/themes/monolith.min.css';
+import '../node_modules/@simonwep/pickr/dist/themes/monolith.min.css';
 // /public/CoCreate-plugins/CoCreate-pickr/node_modules/@simonwep/pickr/dist/themes/monolith.min.css
 // Simple example, see optional options for more configuration.
 let config = {
@@ -93,7 +93,7 @@ observer.init({
         // let colorPickers = mutation.target.querySelectorAll('.color-picker');
         // if (colorPickers.length)
         //     colorPickers.forEach(p => createPickr(p))
-        if(mutation.target.matches('.color-picker'))
+        if (mutation.target.matches('.color-picker'))
             createPickr(mutation.target);
 
     },
@@ -101,6 +101,7 @@ observer.init({
 
 window.addEventListener('load', () => {
     let colorPickers = document.querySelectorAll('.color-picker');
+
     if (colorPickers.length) {
         colorPickers.forEach(p => createPickr(p))
     }
@@ -119,28 +120,29 @@ crud.listen('updateDocument', function(data) {
 })
 
 async function createPickr(p) {
+    console.log(p)
 
     // pick attributes
     let ccAttributes = Array.from(p.attributes).filter(att => att.name.startsWith('data') || att.name.startsWith('name'))
 
     // if not for cocreate
-    if (!ccAttributes.length) return;
+    // if (!ccAttributes.length) return;
 
-    // if (p.getAttribute('data-document_id') !== '') {
-    //     let collection = p.getAttribute('data-collection');
-    //     let document_id = p.getAttribute('data-document_id');
-    //     let name = p.getAttribute('name');
-    //     let unique = Date.now();
+    if (p.hasAttribute('data-document_id') && p.getAttribute('data-document_id') !== '') {
+        let collection = p.getAttribute('data-collection');
+        let document_id = p.getAttribute('data-document_id');
+        let name = p.getAttribute('name');
+        let unique = Date.now();
 
-    //     crud.readDocument({ collection: collection, document_id: document_id, event: unique });
+        crud.readDocument({ collection: collection, document_id: document_id, event: unique });
 
-    //     let { data: responseData, metadata } = await crud.listenAsync(unique);
+        let { data: responseData, metadata } = await crud.listenAsync(unique);
 
 
-    //     if (responseData) {
-    //         config.default = responseData[name];
-    //     }
-    // }
+        if (responseData) {
+            config.default = responseData[name];
+        }
+    }
 
     // set element
     config.el = p;
