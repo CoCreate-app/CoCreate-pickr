@@ -50,20 +50,8 @@ let config = {
     }
 }
 
-let disabledEvent;
-const eventHandler = root => (instance, e, pickr) => {
-    //todofix: what is pickr.disabledEvent??
-    if (instance && !disabledEvent) {
-        let event = new CustomEvent("input", {
-            bubbles: true,
-            detail: {
-                color: instance.toHEXA().toString(),
-            },
-        });
-        pickr.setColor(instance.toHEXA().toString())
-        root.dispatchEvent(event);
-    }
-}
+
+
 
 const saveColor = (color, element) => {
 
@@ -126,23 +114,24 @@ async function createPickr(p) {
     // if not for cocreate
     // if (!ccAttributes.length) return;
 
-    if (p.hasAttribute('data-document_id') && p.getAttribute('data-document_id') !== '') {
-        let collection = p.getAttribute('data-collection');
-        let document_id = p.getAttribute('data-document_id');
-        let name = p.getAttribute('name');
-        let unique = Date.now();
+    // if (p.hasAttribute('data-document_id') && p.getAttribute('data-document_id') !== '') {
+    //     let collection = p.getAttribute('data-collection');
+    //     let document_id = p.getAttribute('data-document_id');
+    //     let name = p.getAttribute('name');
+    //     let unique = Date.now();
 
-        crud.readDocument({ collection: collection, document_id: document_id, event: unique });
+    //   let { data: responseData, metadata } = await crud.readDocument({ collection: collection, document_id: document_id, event: unique });
 
-        let { data: responseData, metadata } = await crud.listenAsync(unique);
+    //     //  await crud.listenAsync(unique);
 
 
-        if (responseData) {
-            config.default = responseData[name];
-        }
-    }
+    //     if (responseData) {
+    //         config.default = responseData[name];
+    //     }
+    // }
 
     // set element
+    let disabledEvent;
     config.el = p;
 
     // init and get root
@@ -155,10 +144,35 @@ async function createPickr(p) {
     })
 
     //set ref
-    refs.set(root, pickr)
+    refs.set(root, {
+        getColor() {
+            return pickr.getColor().toHEXA().toString();
+        },
+        setColor(value) {
+            disabledEvent = true;
+            pickr.setColor(value);
+            disabledEvent = false;
+        }
+
+    })
+
+
+
 
     //set events
-    pickr.on('change', eventHandler(root))
+    pickr.on('change', (instance, e, pickr) => {
+        //todofix: what is pickr.disabledEvent??
+        if (instance && !disabledEvent) {
+            let event = new CustomEvent("input", {
+                bubbles: true,
+                detail: {
+                    color: instance.toHEXA().toString(),
+                },
+            });
+            pickr.setColor(instance.toHEXA().toString())
+            root.dispatchEvent(event);
+        }
+    })
     pickr.on('changestop', (source, instance) => {
         saveColor(instance.getColor().toHEXA().toString(), instance.options.el);
     })
@@ -168,5 +182,5 @@ async function createPickr(p) {
     })
 
 }
-const CoCreatePickr = { refs, disabledEvent };
+const CoCreatePickr = { refs };
 export default CoCreatePickr;
