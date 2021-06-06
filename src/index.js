@@ -149,6 +149,14 @@ async function createPickr(p) {
             return pickr.getColor().toHEXA().toString();
         },
         setColor(value) {
+            window.aaa = [];
+            
+            let aa =  setInterval(()=>{
+                window.aaa.push(value);
+            },1)
+            setTimeout(()=>{
+               clearInterval(aa)
+            },1000)
             disabledEvent = true;
             pickr.setColor(value);
             disabledEvent = false;
