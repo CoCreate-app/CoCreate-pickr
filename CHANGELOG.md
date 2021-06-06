@@ -1,3 +1,11 @@
+## [1.1.10](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.9...v1.1.10) (2021-06-06)
+
+
+### Bug Fixes
+
+* refactor disabledEvent ([4db2b9b](https://github.com/CoCreate-app/CoCreate-pickr/commit/4db2b9b1e2f5c6f5458038ec7c6849ac5c1102a5))
+* remove file duplicate file ([794c02a](https://github.com/CoCreate-app/CoCreate-pickr/commit/794c02aedf10f2e7d6b1795bd36cd02e92b2dcf5))
+
 ## [1.1.9](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.8...v1.1.9) (2021-05-18)
 
 
