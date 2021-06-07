@@ -1,7 +1,7 @@
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer'
 import crud from '@cocreate/crud-client'
-import '../node_modules/@simonwep/pickr/dist/themes/monolith.min.css';
+import '@simonwep/pickr/dist/themes/monolith.min.css';
 
 // Simple example, see optional options for more configuration.
 let config = {
