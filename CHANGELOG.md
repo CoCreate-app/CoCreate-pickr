@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.10...v1.1.11) (2021-06-07)
+
+
+### Bug Fixes
+
+* update path to pickr css ([11606d5](https://github.com/CoCreate-app/CoCreate-pickr/commit/11606d5ebaf4e8f8dd29685fbdd1ec302fa9b85b))
+
 ## [1.1.10](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.9...v1.1.10) (2021-06-06)
 
 
