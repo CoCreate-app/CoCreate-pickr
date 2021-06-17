@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.11...v1.1.12) (2021-06-16)
+
+
+### Bug Fixes
+
+* added header for seo ([4c32a33](https://github.com/CoCreate-app/CoCreate-pickr/commit/4c32a332e30897695ec3e73b915d49d8767a4787))
+
 ## [1.1.11](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.10...v1.1.11) (2021-06-07)
 
 
