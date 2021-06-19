@@ -75,9 +75,12 @@ let refs = new Map();
 
 observer.init({
     name: "pickr",
-    observe: ["childList"],
-    include: ".color-picker",
+    observe: ["addedNodes"],
+
     callback: (mutation) => {
+        let el = mutation.target;
+        if (!el.tagName || !el.classList.contains('color-picker'))
+            return;
         let colorPickers = mutation.target.querySelectorAll('.color-picker');
         if (colorPickers.length)
             colorPickers.forEach(p => createPickr(p))
@@ -150,13 +153,13 @@ async function createPickr(p) {
         },
         setColor(value) {
             window.aaa = [];
-            
-            let aa =  setInterval(()=>{
+
+            let aa = setInterval(() => {
                 window.aaa.push(value);
-            },1)
-            setTimeout(()=>{
-               clearInterval(aa)
-            },1000)
+            }, 1)
+            setTimeout(() => {
+                clearInterval(aa)
+            }, 1000)
             disabledEvent = true;
             pickr.setColor(value);
             disabledEvent = false;
