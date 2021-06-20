@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.12...v1.1.13) (2021-06-20)
+
+
+### Bug Fixes
+
+* new mutaionObserver init function ([9ccdfa1](https://github.com/CoCreate-app/CoCreate-pickr/commit/9ccdfa1f55aef860a0aaaf154206939be3f468ad))
+
 ## [1.1.12](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.11...v1.1.12) (2021-06-16)
 
 
