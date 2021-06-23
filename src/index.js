@@ -1,9 +1,9 @@
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer'
 import crud from '@cocreate/crud-client'
+import form from '@cocreate/form'
 import '@simonwep/pickr/dist/themes/monolith.min.css';
 
-// Simple example, see optional options for more configuration.
 let config = {
     el: null, // will be replaced in observer
     theme: 'monolith', // or 'monolith', or 'nano'
@@ -51,32 +51,11 @@ let config = {
 }
 
 
-
-
-const saveColor = (color, element) => {
-
-    const collection = element.getAttribute('data-collection');
-    let name = element.getAttribute('name');
-    const document_id = element.getAttribute('data-document_id');
-
-    crud.updateDocument({
-        collection,
-        document_id,
-        name,
-        upsert: true, // creates a documentid if one does not exist
-        data: {
-            [name]: color
-        },
-    });
-}
-
 let refs = new Map();
-
 
 observer.init({
     name: "pickr",
     observe: ["addedNodes"],
-
     callback: (mutation) => {
         let el = mutation.target;
         if ( !el.classList.contains('color-picker'))
@@ -96,40 +75,24 @@ window.addEventListener('load', () => {
 })
 
 crud.listen('updateDocument', function(data) {
-    console.log("updateDocument received", data.data[data.name])
-
     let pickrs = document.querySelectorAll('.pickr[data-collection="' + data.collection + '"][data-document_id="' + data.document_id + '"][name="' + data.name + '"]');
-    // if (data.metadata == 'pickr-select') {
     for (let pickr of pickrs) {
         CoCreatePickr.refs.get(pickr).setColor(data.data[data.name]);
     }
-    // }
 })
 
 async function createPickr(p) {
-    console.log(p)
 
     // pick attributes
     let ccAttributes = Array.from(p.attributes).filter(att => att.name.startsWith('data') || att.name.startsWith('name'))
 
-    // if not for cocreate
-    // if (!ccAttributes.length) return;
-
-    // if (p.hasAttribute('data-document_id') && p.getAttribute('data-document_id') !== '') {
-    //     let collection = p.getAttribute('data-collection');
-    //     let document_id = p.getAttribute('data-document_id');
-    //     let name = p.getAttribute('name');
-    //     let unique = Date.now();
-
-    //   let { data: responseData, metadata } = await crud.readDocument({ collection: collection, document_id: document_id, event: unique });
-
-    //     //  await crud.listenAsync(unique);
-
-
-    //     if (responseData) {
-    //         config.default = responseData[name];
-    //     }
-    // }
+	    let resp = await crud.read(p)
+	    if (resp) {
+	        let name = p.getAttribute('name')
+	        if (name && resp.data[name]) {
+        	    config.default = resp.data[name];
+	        }
+	    }
 
     // set element
     let disabledEvent;
@@ -166,8 +129,6 @@ async function createPickr(p) {
     })
 
 
-
-
     //set events
     pickr.on('change', (instance, e, pickr) => {
         //todofix: what is pickr.disabledEvent??
@@ -183,13 +144,32 @@ async function createPickr(p) {
         }
     })
     pickr.on('changestop', (source, instance) => {
-        saveColor(instance.getColor().toHEXA().toString(), instance.options.el);
+        save(instance);
     })
 
     pickr.on('swatchselect', (source, instance) => {
-        saveColor(instance.getColor().toHEXA().toString(), instance.options.el);
+        save(instance);
     })
+    
+    async function save(instance){
+    	var data = [{
+    	    element: instance.options.el,
+    	    value: instance.getColor().toHEXA().toString()
+    	}];
+    	await crud.save(data)
+    }
 
+    
 }
+
+form.init({
+	name: 'CoCreatePickr',
+	callback: (form) => {
+		let elements = form.querySelectorAll('.color-picker')
+		CoCreatePickr.save(elements)
+	},
+});   
+
+
 const CoCreatePickr = { refs };
 export default CoCreatePickr;
