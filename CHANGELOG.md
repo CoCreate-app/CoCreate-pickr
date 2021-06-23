@@ -1,3 +1,10 @@
+## [1.1.14](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.13...v1.1.14) (2021-06-23)
+
+
+### Bug Fixes
+
+* update to new crud.save and crud.read ([a7fc726](https://github.com/CoCreate-app/CoCreate-pickr/commit/a7fc726642e18a9fcc2bec839ca3da0ea23a46b6))
+
 ## [1.1.13](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.12...v1.1.13) (2021-06-20)
 
 
