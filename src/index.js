@@ -74,10 +74,22 @@ window.addEventListener('load', () => {
 
 })
 
+// crud.listen('updateDocument', function(data) {
+//     let pickrs = document.querySelectorAll('.pickr[data-collection="' + data.collection + '"][data-document_id="' + data.document_id + '"][name="' + data.name + '"]');
+//     for (let pickr of pickrs) {
+//         CoCreatePickr.refs.get(pickr).setColor(data.data[data.name]);
+//     }
+// })
+
 crud.listen('updateDocument', function(data) {
-    let pickrs = document.querySelectorAll('.pickr[data-collection="' + data.collection + '"][data-document_id="' + data.document_id + '"][name="' + data.name + '"]');
+    const {collection, document_id, data: responseData} = data;
+    let pickrs = document.querySelectorAll(`.pickr[data-collection="${collection}"][data-document_id="${document_id}"]`);
     for (let pickr of pickrs) {
-        CoCreatePickr.refs.get(pickr).setColor(data.data[data.name]);
+        const name = pickr.getAttribute('name')
+        if (responseData[name]) {
+            CoCreatePickr.refs.get(pickr).setColor(responseData[name]);
+        }
+        
     }
 })
 
@@ -141,6 +153,8 @@ async function createPickr(p) {
             });
             pickr.setColor(instance.toHEXA().toString())
             root.dispatchEvent(event);
+            
+            // save(instance);
         }
     })
     pickr.on('changestop', (source, instance) => {
