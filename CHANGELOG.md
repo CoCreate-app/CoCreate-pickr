@@ -1,3 +1,10 @@
+## [1.1.15](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.14...v1.1.15) (2021-06-23)
+
+
+### Bug Fixes
+
+* crud.listen updateDocument ([b94fa04](https://github.com/CoCreate-app/CoCreate-pickr/commit/b94fa043b696ac33095a865b468863b14eeb9e89))
+
 ## [1.1.14](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.13...v1.1.14) (2021-06-23)
 
 
