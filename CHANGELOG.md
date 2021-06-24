@@ -1,3 +1,11 @@
+## [1.1.16](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.15...v1.1.16) (2021-06-24)
+
+
+### Bug Fixes
+
+* add method to turn on and off console.log while in development ([2918579](https://github.com/CoCreate-app/CoCreate-pickr/commit/2918579a927f4d2621c7ffec8f0e3f6e8f914f10))
+* update all [@cocreate](https://github.com/cocreate) to use latest versions ([16326a9](https://github.com/CoCreate-app/CoCreate-pickr/commit/16326a91b068ab5935722e8c6f5392a22650f709))
+
 ## [1.1.15](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.14...v1.1.15) (2021-06-23)
 
 
