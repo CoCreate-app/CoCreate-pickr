@@ -53,17 +53,17 @@ let config = {
 
 let refs = new Map();
 
-observer.init({
-    name: "pickr",
-    observe: ["addedNodes"],
-    callback: (mutation) => {
-        let el = mutation.target;
-        if ( !el.classList.contains('color-picker'))
-            return;
-       createPickr(el)
+// observer.init({
+//     name: "pickr",
+//     observe: ["addedNodes"],
+//     callback: (mutation) => {
+//         let el = mutation.target;
+//         if ( !el.classList.contains('color-picker'))
+//             return;
+//       createPickr(el)
 
-    },
-})
+//     },
+// })
 
 window.addEventListener('load', () => {
     let colorPickers = document.querySelectorAll('.color-picker');
