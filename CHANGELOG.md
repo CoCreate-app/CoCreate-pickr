@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.18...v1.1.19) (2021-06-29)
+
+
+### Bug Fixes
+
+* add logger utility ([513c984](https://github.com/CoCreate-app/CoCreate-pickr/commit/513c984027746e145b96bd9104766200855918a8))
+
 ## [1.1.18](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.17...v1.1.18) (2021-06-25)
 
 
