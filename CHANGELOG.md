@@ -1,3 +1,10 @@
+## [1.1.21](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.20...v1.1.21) (2021-06-30)
+
+
+### Bug Fixes
+
+* Update readme.md ([4396048](https://github.com/CoCreate-app/CoCreate-pickr/commit/43960486f20757e3e4c343c42f8c34b5886d3a9b))
+
 ## [1.1.20](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.19...v1.1.20) (2021-06-30)
 
 
