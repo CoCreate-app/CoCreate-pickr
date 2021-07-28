@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.25...v1.2.0) (2021-07-28)
+
+
+### Bug Fixes
+
+* remove data- from fetch, pass and filter ([ced46f0](https://github.com/CoCreate-app/CoCreate-pickr/commit/ced46f09fca6810983d448ba6b678006f57d2a0b))
+
+
+### Features
+
+* add new is{attribute} system and remove data- from attributtes ([5f41004](https://github.com/CoCreate-app/CoCreate-pickr/commit/5f410044a4feeee5ea6f56c9fde02501c9a55dc4))
+
 ## [1.1.25](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.24...v1.1.25) (2021-07-17)
 
 
