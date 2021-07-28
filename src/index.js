@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
 })
 
 // crud.listen('updateDocument', function(data) {
-//     let pickrs = document.querySelectorAll('.pickr[data-collection="' + data.collection + '"][data-document_id="' + data.document_id + '"][name="' + data.name + '"]');
+//     let pickrs = document.querySelectorAll('.pickr[collection="' + data.collection + '"][document_id="' + data.document_id + '"][name="' + data.name + '"]');
 //     for (let pickr of pickrs) {
 //         CoCreatePickr.refs.get(pickr).setColor(data.data[data.name]);
 //     }
@@ -80,7 +80,7 @@ window.addEventListener('load', () => {
 
 crud.listen('updateDocument', function(data) {
     const {collection, document_id, data: responseData} = data;
-    let pickrs = document.querySelectorAll(`.pickr[data-collection="${collection}"][data-document_id="${document_id}"]`);
+    let pickrs = document.querySelectorAll(`.pickr[collection="${collection}"][document_id="${document_id}"]`);
     for (let pickr of pickrs) {
         const name = pickr.getAttribute('name')
         if (responseData[name]) {
