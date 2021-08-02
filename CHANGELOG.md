@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.0...v1.2.1) (2021-08-02)
+
+
+### Bug Fixes
+
+* remove data- from attributes ([3bbf1ca](https://github.com/CoCreate-app/CoCreate-pickr/commit/3bbf1cac7cc2156edf41bac5cb2a64b99c1914a2))
+* update data-fullscreen to fullscreen ([01e4bf2](https://github.com/CoCreate-app/CoCreate-pickr/commit/01e4bf2dda1b7957c3790401752421f910ccc3fd))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.1.25...v1.2.0) (2021-07-28)
 
 
