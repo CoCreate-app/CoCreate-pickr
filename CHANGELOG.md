@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.4...v1.2.5) (2021-08-22)
+
+
+### Bug Fixes
+
+* removed data- from main-content, clone, filter-value_type ([a1d6c54](https://github.com/CoCreate-app/CoCreate-pickr/commit/a1d6c548beaabde2d62177d7a0b1a5af050509b4))
+
 ## [1.2.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.3...v1.2.4) (2021-08-22)
 
 
