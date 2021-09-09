@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.10...v1.2.11) (2021-09-09)
+
+
+### Bug Fixes
+
+* CoCreate.config directory, path, name and  public ([1388991](https://github.com/CoCreate-app/CoCreate-pickr/commit/13889916c2993cf17f5201bfd3decfa0ada4c62b))
+
 ## [1.2.10](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.9...v1.2.10) (2021-09-08)
 
 
