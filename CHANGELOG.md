@@ -1,3 +1,10 @@
+## [1.2.15](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.14...v1.2.15) (2021-09-12)
+
+
+### Bug Fixes
+
+* update sidenav to use resize and toggle ([1f673c6](https://github.com/CoCreate-app/CoCreate-pickr/commit/1f673c646b0f0af819a21c6c68dad2b03b819281))
+
 ## [1.2.14](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.13...v1.2.14) (2021-09-09)
 
 
