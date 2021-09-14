@@ -1,3 +1,10 @@
+## [1.2.17](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.16...v1.2.17) (2021-09-14)
+
+
+### Bug Fixes
+
+* add cocreate.app to domains ([b8aa0ac](https://github.com/CoCreate-app/CoCreate-pickr/commit/b8aa0acd8020344e95c1e932f235956398edbd55))
+
 ## [1.2.16](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.15...v1.2.16) (2021-09-13)
 
 
