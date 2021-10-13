@@ -1,6 +1,6 @@
 # CoCreate-pickr
 
-A simple pickr component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/pickr)
+A simple pickr component in vanilla javascript. Easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/pickr)
 
 ![minified](https://img.badgesize.io/https://cdn.cocreate.app/pickr/latest/CoCreate-pickr.min.js?style=flat-square&label=minified&color=orange)
 ![gzip](https://img.badgesize.io/https://cdn.cocreate.app/pickr/latest/CoCreate-pickr.min.js?compression=gzip&style=flat-square&label=gzip&color=yellow)
