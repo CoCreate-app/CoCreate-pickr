@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.34...v1.3.0) (2021-11-01)
+
+
+### Features
+
+* sets the value in the dom.element refrence as getValue all cocreate components are doing this making it a simple unified way to get an elements value regardless of what component ([f65e128](https://github.com/CoCreate-app/CoCreate-pickr/commit/f65e128d77f47aed025fec013eb08f8a85bcc2d7))
+
 ## [1.2.34](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.2.33...v1.2.34) (2021-10-29)
 
 
