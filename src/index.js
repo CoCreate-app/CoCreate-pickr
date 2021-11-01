@@ -93,7 +93,7 @@ crud.listen('updateDocument', function(data) {
 async function createPickr(p) {
 
     // pick attributes
-    let ccAttributes = Array.from(p.attributes).filter(att => att.name.startsWith('data') || att.name.startsWith('name'))
+    let attributes = p.attributes
 
 	    let resp = await crud.read(p)
 	    if (resp) {
@@ -106,15 +106,19 @@ async function createPickr(p) {
     // set element
     let disabledEvent;
     config.el = p;
-
+    if (!config.el) {
+        console.log(config)
+        return;
+    }
     // init and get root
     let pickr = Pickr.create(config);
     let root = pickr.getRoot().root;
 
     // write attributes
-    ccAttributes.forEach(att => {
-        root.setAttribute(att.name, att.value);
-    })
+    for (let attribute of attributes) {
+        if (attribute.value == 'color-picker') continue;
+        root.setAttribute(attribute.name, attribute.value);
+    }
 
     //set ref
     refs.set(root, {
@@ -150,7 +154,7 @@ async function createPickr(p) {
             });
             pickr.setColor(instance.toHEXA().toString())
             root.dispatchEvent(event);
-            
+            root.value = instance.toHEXA().toString();
             // save(instance);
         }
     })
