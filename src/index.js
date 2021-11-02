@@ -5,7 +5,8 @@ import form from '@cocreate/form'
 import '@simonwep/pickr/dist/themes/monolith.min.css';
 
 let config = {
-    el: null, // will be replaced in observer
+    el: '.color-picker', // will be replaced in observer
+    container: 'body',
     theme: 'monolith', // or 'monolith', or 'nano'
     position: 'bottom-start',
     defaultRepresentation: 'HEX',
@@ -137,9 +138,13 @@ async function createPickr(p) {
             disabledEvent = true;
             pickr.setColor(value);
             disabledEvent = false;
+
         }
 
     })
+    root.getValue = () => pickr.getColor().toHEXA().toString();
+    root.setValue = (value) => pickr.setColor(value);
+
 
 
     //set events
@@ -154,7 +159,7 @@ async function createPickr(p) {
             });
             pickr.setColor(instance.toHEXA().toString())
             root.dispatchEvent(event);
-            root.value = instance.toHEXA().toString();
+    root.getValue = () => pickr.getColor().toHEXA().toString();
             // save(instance);
         }
     })
