@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.1...v1.4.2) (2021-11-02)
+
+
+### Bug Fixes
+
+* removed @cocreate/form ([955fad1](https://github.com/CoCreate-app/CoCreate-pickr/commit/955fad10b52ec82c224a69e4abca5cbd95f8cbdd))
+
 ## [1.4.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.0...v1.4.1) (2021-11-02)
 
 
