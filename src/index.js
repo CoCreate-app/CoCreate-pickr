@@ -63,14 +63,13 @@ observer.init({
     },
 })
 
-window.addEventListener('load', () => {
+function init() {
     let colorPickers = document.querySelectorAll('.color-picker');
 
     if (colorPickers.length) {
         colorPickers.forEach(p => createPickr(p))
     }
-
-})
+}
 
 // crud.listen('updateDocument', function(data) {
 //     let pickrs = document.querySelectorAll('.pickr[collection="' + data.collection + '"][document_id="' + data.document_id + '"][name="' + data.name + '"]');
@@ -142,10 +141,9 @@ async function createPickr(p) {
         }
 
     })
+
     root.getValue = () => pickr.getColor().toHEXA().toString();
-    root.setValue = (value) => pickr.setColor(value);
-
-
+    root.setValue = (el, value) => pickr.setColor(value);
 
     //set events
     pickr.on('change', (instance, e, pickr) => {
@@ -159,7 +157,7 @@ async function createPickr(p) {
             });
             pickr.setColor(instance.toHEXA().toString())
             root.dispatchEvent(event);
-    root.getValue = () => pickr.getColor().toHEXA().toString();
+            // root.getValue = () => pickr.getColor().toHEXA().toString();
             // save(instance);
         }
     })
@@ -190,6 +188,7 @@ form.init({
 	},
 });   
 
+init()
 
 const CoCreatePickr = { refs };
 export default CoCreatePickr;
