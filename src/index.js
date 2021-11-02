@@ -1,7 +1,6 @@
 import Pickr from '@simonwep/pickr';
-import observer from '@cocreate/observer'
-import crud from '@cocreate/crud-client'
-import form from '@cocreate/form'
+import observer from '@cocreate/observer';
+import crud from '@cocreate/crud-client';
 import '@simonwep/pickr/dist/themes/monolith.min.css';
 
 let config = {
@@ -49,7 +48,7 @@ let config = {
             save: false
         }
     }
-}
+};
 
 
 let refs = new Map();
@@ -59,15 +58,15 @@ observer.init({
     observe: ['addedNodes'],
     target: '.color-picker',
     callback: (mutation) => {
-      createPickr(mutation.target)
+      createPickr(mutation.target);
     },
-})
+});
 
 function init() {
     let colorPickers = document.querySelectorAll('.color-picker');
 
     if (colorPickers.length) {
-        colorPickers.forEach(p => createPickr(p))
+        colorPickers.forEach(p => createPickr(p));
     }
 }
 
@@ -82,22 +81,22 @@ crud.listen('updateDocument', function(data) {
     const {collection, document_id, data: responseData} = data;
     let pickrs = document.querySelectorAll(`.pickr[collection="${collection}"][document_id="${document_id}"]`);
     for (let pickr of pickrs) {
-        const name = pickr.getAttribute('name')
+        const name = pickr.getAttribute('name');
         if (responseData[name]) {
             CoCreatePickr.refs.get(pickr).setColor(responseData[name]);
         }
         
     }
-})
+});
 
 async function createPickr(p) {
 
     // pick attributes
-    let attributes = p.attributes
+    let attributes = p.attributes;
 
-	    let resp = await crud.read(p)
+	    let resp = await crud.read(p);
 	    if (resp) {
-	        let name = p.getAttribute('name')
+	        let name = p.getAttribute('name');
 	        if (name && resp.data[name]) {
         	    config.default = resp.data[name];
 	        }
@@ -107,7 +106,7 @@ async function createPickr(p) {
     let disabledEvent;
     config.el = p;
     if (!config.el) {
-        console.log(config)
+        console.log(config);
         return;
     }
     // init and get root
@@ -130,17 +129,17 @@ async function createPickr(p) {
 
             let aa = setInterval(() => {
                 window.aaa.push(value);
-            }, 1)
+            }, 1);
             setTimeout(() => {
-                clearInterval(aa)
-            }, 1000)
+                clearInterval(aa);
+            }, 1000);
             disabledEvent = true;
             pickr.setColor(value);
             disabledEvent = false;
 
         }
 
-    })
+    });
 
     root.getValue = () => pickr.getColor().toHEXA().toString();
     root.setValue = (el, value) => pickr.setColor(value);
@@ -155,40 +154,31 @@ async function createPickr(p) {
                     color: instance.toHEXA().toString(),
                 },
             });
-            pickr.setColor(instance.toHEXA().toString())
+            pickr.setColor(instance.toHEXA().toString());
             root.dispatchEvent(event);
-            // root.getValue = () => pickr.getColor().toHEXA().toString();
-            // save(instance);
         }
-    })
+    });
+    
     pickr.on('changestop', (source, instance) => {
         save(instance);
-    })
+    });
 
     pickr.on('swatchselect', (source, instance) => {
         save(instance);
-    })
+    });
     
     async function save(instance){
     	var data = [{
     	    element: instance.options.el,
     	    value: instance.getColor().toHEXA().toString()
     	}];
-    	await crud.save(data)
+    	await crud.save(data);
     }
 
     
 }
 
-form.init({
-	name: 'CoCreatePickr',
-	callback: (form) => {
-		let elements = form.querySelectorAll('.color-picker')
-		CoCreatePickr.save(elements)
-	},
-});   
-
-init()
+init();
 
 const CoCreatePickr = { refs };
 export default CoCreatePickr;
