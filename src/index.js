@@ -147,32 +147,37 @@ async function createPickr(p) {
     //set events
     pickr.on('change', (instance, e, pickr) => {
         //todofix: what is pickr.disabledEvent??
-        if (instance && !disabledEvent) {
-            let event = new CustomEvent("input", {
-                bubbles: true,
-                detail: {
-                    color: instance.toHEXA().toString(),
-                },
-            });
             pickr.setColor(instance.toHEXA().toString());
-            root.dispatchEvent(event);
-        }
     });
     
     pickr.on('changestop', (source, instance) => {
         save(instance);
+        dispatchEvents(instance)
     });
 
     pickr.on('swatchselect', (source, instance) => {
         save(instance);
+        dispatchEvents(instance)
     });
     
-    async function save(instance){
+    function save(instance){
     	var data = [{
     	    element: instance.options.el,
     	    value: instance.getColor().toHEXA().toString()
     	}];
-    	await crud.save(data);
+    	crud.save(data);
+    }
+    
+    function dispatchEvents(instance){
+        if (instance && !disabledEvent) {
+            let event = new CustomEvent("input", {
+                bubbles: true,
+                detail: {
+                    color: instance.getColor().toHEXA().toString()
+                },
+            });
+            root.dispatchEvent(event);
+        }
     }
 
     
