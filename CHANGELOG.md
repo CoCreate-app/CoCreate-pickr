@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.2...v1.4.3) (2021-11-03)
+
+
+### Bug Fixes
+
+* dispatch event was firing when not needed ([818c24e](https://github.com/CoCreate-app/CoCreate-pickr/commit/818c24e93b150cc0cabecc82a890683f27ffd3b7))
+
 ## [1.4.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.1...v1.4.2) (2021-11-02)
 
 
