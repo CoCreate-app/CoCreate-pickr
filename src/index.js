@@ -161,11 +161,7 @@ async function createPickr(p) {
     });
     
     function save(instance){
-    	var data = [{
-    	    element: instance.options.el,
-    	    value: instance.getColor().toHEXA().toString()
-    	}];
-    	crud.save(data);
+    	crud.save(root, instance.getColor().toHEXA().toString());
     }
     
     function dispatchEvents(instance){
