@@ -1,3 +1,4 @@
+/*globals CustomEvent*/
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer';
 import crud from '@cocreate/crud-client';
@@ -70,13 +71,6 @@ function init() {
     }
 }
 
-// crud.listen('updateDocument', function(data) {
-//     let pickrs = document.querySelectorAll('.pickr[collection="' + data.collection + '"][document_id="' + data.document_id + '"][name="' + data.name + '"]');
-//     for (let pickr of pickrs) {
-//         CoCreatePickr.refs.get(pickr).setColor(data.data[data.name]);
-//     }
-// })
-
 crud.listen('updateDocument', function(data) {
     const {collection, document_id, data: responseData} = data;
     let pickrs = document.querySelectorAll(`.pickr[collection="${collection}"][document_id="${document_id}"]`);
@@ -111,16 +105,16 @@ async function createPickr(p) {
     }
     // init and get root
     let pickr = Pickr.create(config);
-    let root = pickr.getRoot().root;
+    let element = pickr.getRoot().root;
 
     // write attributes
     for (let attribute of attributes) {
         if (attribute.value == 'color-picker') continue;
-        root.setAttribute(attribute.name, attribute.value);
+        element.setAttribute(attribute.name, attribute.value);
     }
 
     //set ref
-    refs.set(root, {
+    refs.set(element, {
         getColor() {
             return pickr.getColor().toHEXA().toString();
         },
@@ -141,27 +135,26 @@ async function createPickr(p) {
 
     });
 
-    root.getValue = () => pickr.getColor().toHEXA().toString();
-    root.setValue = (el, value) => pickr.setColor(value);
+    element.getValue = () => pickr.getColor().toHEXA().toString();
+    element.setValue = (el, value) => pickr.setColor(value);
 
     //set events
     pickr.on('change', (instance, e, pickr) => {
-        //todofix: what is pickr.disabledEvent??
             pickr.setColor(instance.toHEXA().toString());
     });
     
     pickr.on('changestop', (source, instance) => {
         save(instance);
-        dispatchEvents(instance)
+        dispatchEvents(instance);
     });
 
     pickr.on('swatchselect', (source, instance) => {
         save(instance);
-        dispatchEvents(instance)
+        dispatchEvents(instance);
     });
     
     function save(instance){
-    	crud.save(root, instance.getColor().toHEXA().toString());
+    	crud.save(element, instance.getColor().toHEXA().toString());
     }
     
     function dispatchEvents(instance){
@@ -172,7 +165,7 @@ async function createPickr(p) {
                     color: instance.getColor().toHEXA().toString()
                 },
             });
-            root.dispatchEvent(event);
+            element.dispatchEvent(event);
         }
     }
 
