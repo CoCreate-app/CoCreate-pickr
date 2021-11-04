@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.5...v1.4.6) (2021-11-04)
+
+
+### Bug Fixes
+
+* getAttribute error resolved, the element pickr was sending to crud was the replaced element so it no longer existed ([3e80cc3](https://github.com/CoCreate-app/CoCreate-pickr/commit/3e80cc3d84804961cc463e979a0a0419229db284))
+
 ## [1.4.5](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.4...v1.4.5) (2021-11-04)
 
 
