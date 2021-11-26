@@ -1,3 +1,10 @@
+## [1.4.16](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.15...v1.4.16) (2021-11-26)
+
+
+### Bug Fixes
+
+* docs sidenav width ([00ddd6a](https://github.com/CoCreate-app/CoCreate-pickr/commit/00ddd6a06f8a2bdd06353ab8959fd7e22d518993))
+
 ## [1.4.15](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.14...v1.4.15) (2021-11-26)
 
 
