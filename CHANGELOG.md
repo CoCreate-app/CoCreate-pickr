@@ -1,3 +1,10 @@
+## [1.4.17](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.16...v1.4.17) (2021-11-27)
+
+
+### Bug Fixes
+
+* update docs api and cocreateJS script ([3037dcf](https://github.com/CoCreate-app/CoCreate-pickr/commit/3037dcffbf17084cf834cbedb96c619cde677dc9))
+
 ## [1.4.16](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.15...v1.4.16) (2021-11-26)
 
 
