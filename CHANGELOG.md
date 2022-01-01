@@ -1,3 +1,10 @@
+## [1.4.22](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.21...v1.4.22) (2022-01-01)
+
+
+### Bug Fixes
+
+* get-value attribute value now supports a selector added # to all values currently in get-value attributes ([f66611f](https://github.com/CoCreate-app/CoCreate-pickr/commit/f66611f0067aa83d80c47f08ffa4984995c954a9))
+
 ## [1.4.21](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.20...v1.4.21) (2021-12-15)
 
 
