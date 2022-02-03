@@ -1,3 +1,10 @@
+## [1.4.24](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.23...v1.4.24) (2022-02-03)
+
+
+### Bug Fixes
+
+* replaced show and hide class hidden with attribute hidden ([cbc34bf](https://github.com/CoCreate-app/CoCreate-pickr/commit/cbc34bf635f7f12a40975a62c0e7cc75d95ec260))
+
 ## [1.4.23](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.22...v1.4.23) (2022-02-01)
 
 
