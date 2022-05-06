@@ -1,3 +1,10 @@
+## [1.4.29](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.28...v1.4.29) (2022-05-06)
+
+
+### Bug Fixes
+
+* update config organization_Id to organization_id ([ec96a8d](https://github.com/CoCreate-app/CoCreate-pickr/commit/ec96a8d71ce4cc8c6ddfaebbd1b7b30e1196f597))
+
 ## [1.4.28](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.27...v1.4.28) (2022-02-24)
 
 
