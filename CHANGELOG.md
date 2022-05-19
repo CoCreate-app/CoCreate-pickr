@@ -1,3 +1,10 @@
+## [1.4.30](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.29...v1.4.30) (2022-05-19)
+
+
+### Bug Fixes
+
+* update document_id on link index.css ([0cb3b64](https://github.com/CoCreate-app/CoCreate-pickr/commit/0cb3b64584a67e4a958c80fbc9d081bc8c4c5056))
+
 ## [1.4.29](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.28...v1.4.29) (2022-05-06)
 
 
