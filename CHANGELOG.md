@@ -1,3 +1,10 @@
+## [1.4.34](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.33...v1.4.34) (2022-07-25)
+
+
+### Bug Fixes
+
+* crud.read no longer needs param isFlat ([57df684](https://github.com/CoCreate-app/CoCreate-pickr/commit/57df6849bda978c8849ec9df930e86c96f6ffd8b))
+
 ## [1.4.33](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.32...v1.4.33) (2022-06-18)
 
 
