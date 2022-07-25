@@ -92,7 +92,7 @@ async function createPickr(p) {
 	    if (resp) {
 	        let name = p.getAttribute('name');
 	        if (name && resp.data[name]) {
-        	    config.default = resp.data[name];
+        	    config.default = crud.getObjectValueByPath(resp.data, name);
 	        }
 	    }
 
