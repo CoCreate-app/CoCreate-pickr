@@ -1,3 +1,10 @@
+## [1.4.36](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.35...v1.4.36) (2022-09-29)
+
+
+### Bug Fixes
+
+* config renameed to CoCreateConfig ([e967d8f](https://github.com/CoCreate-app/CoCreate-pickr/commit/e967d8fb29beb7d930f416651da8e510e82fe755))
+
 ## [1.4.35](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.34...v1.4.35) (2022-09-01)
 
 
