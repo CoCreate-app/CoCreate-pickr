@@ -1,3 +1,10 @@
+## [1.4.40](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.39...v1.4.40) (2022-09-30)
+
+
+### Bug Fixes
+
+* bump [@cocreate](https://github.com/cocreate) dependencies ([160e200](https://github.com/CoCreate-app/CoCreate-pickr/commit/160e200b30b931e5953a2cdbf3f373b5f4ec5d23))
+
 ## [1.4.39](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.38...v1.4.39) (2022-09-30)
 
 
