@@ -1,3 +1,10 @@
+## [1.4.43](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.42...v1.4.43) (2022-10-02)
+
+
+### Bug Fixes
+
+* bump @cocreate/hosting and @cocreate/socket-client ([1e08814](https://github.com/CoCreate-app/CoCreate-pickr/commit/1e08814b7082a044217c0c849b4625d86825f2a7))
+
 ## [1.4.42](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.41...v1.4.42) (2022-10-01)
 
 
