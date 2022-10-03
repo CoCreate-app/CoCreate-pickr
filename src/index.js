@@ -136,7 +136,7 @@ async function createPickr(p) {
     });
 
     element.getValue = () => pickr.getColor().toHEXA().toString();
-    element.setValue = (el, value) => pickr.setColor(value);
+    element.setValue = (value) => pickr.setColor(value);
 
     //set events
     pickr.on('change', (instance, e, pickr) => {
