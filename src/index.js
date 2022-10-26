@@ -1,8 +1,14 @@
 /*globals CustomEvent*/
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer';
-import crud from '@cocreate/crud-client';
+import CRUD from '@cocreate/crud-client';
 import '@simonwep/pickr/dist/themes/monolith.min.css';
+
+let crud
+if(CRUD && CRUD.default)
+	crud = CRUD.default
+else
+	crud = CRUD
 
 let config = {
     el: '.color-picker', // will be replaced in observer
