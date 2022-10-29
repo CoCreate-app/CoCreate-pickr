@@ -97,8 +97,8 @@ async function createPickr(p) {
 	    let resp = await crud.read(p);
 	    if (resp) {
 	        let name = p.getAttribute('name');
-	        if (name && resp.data[name]) {
-        	    config.default = crud.getObjectValueByPath(resp.data, name);
+	        if (name && resp.document[name]) {
+        	    config.default = crud.getObjectValueByPath(resp.document, name);
 	        }
 	    }
 
