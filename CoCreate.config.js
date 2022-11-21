@@ -10,7 +10,7 @@ module.exports = {
             "collection": "files",
             "document_id": "60298d60e979fb17407e25bd",
             "key": "src",
-            "data":{
+            "document": {
                 "name": "index.html",
                 "path": "/docs/pickr/index.html",
                 "domains": [
