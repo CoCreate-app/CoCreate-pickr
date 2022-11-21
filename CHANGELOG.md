@@ -1,3 +1,12 @@
+## [1.4.45](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.44...v1.4.45) (2022-11-21)
+
+
+### Bug Fixes
+
+* renamed data.data to data.document ([811c82d](https://github.com/CoCreate-app/CoCreate-pickr/commit/811c82d7a8432186a85a3e06ddaa6ecbc33903ec))
+* setVaremoved element param from getValue ([2987ad1](https://github.com/CoCreate-app/CoCreate-pickr/commit/2987ad1526c19748a1b4014178ecbacde458080d))
+* update crud functions to receive an array of objects as the response ([e6f7da7](https://github.com/CoCreate-app/CoCreate-pickr/commit/e6f7da7380f041f97101594085f65ceb593e624c))
+
 ## [1.4.44](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.43...v1.4.44) (2022-10-02)
 
 
