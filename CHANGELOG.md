@@ -1,3 +1,10 @@
+## [1.4.48](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.47...v1.4.48) (2022-11-21)
+
+
+### Bug Fixes
+
+* replaced document_id with document._id ([5951ac8](https://github.com/CoCreate-app/CoCreate-pickr/commit/5951ac81776f10dfd35c83a3cffb07c0bd9a43a1))
+
 ## [1.4.47](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.46...v1.4.47) (2022-11-21)
 
 
