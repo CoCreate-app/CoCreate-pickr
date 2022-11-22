@@ -1,3 +1,11 @@
+## [1.4.50](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.49...v1.4.50) (2022-11-22)
+
+
+### Bug Fixes
+
+* apply src: {{source}} to CoCreate.config ([b93b32a](https://github.com/CoCreate-app/CoCreate-pickr/commit/b93b32a63a79698d53187c75905a094610e4fc0e))
+* workflow docs ([6e30fd7](https://github.com/CoCreate-app/CoCreate-pickr/commit/6e30fd73e9f50e8cf56c50f2d3ae70478ccdd39a))
+
 ## [1.4.49](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.48...v1.4.49) (2022-11-21)
 
 
