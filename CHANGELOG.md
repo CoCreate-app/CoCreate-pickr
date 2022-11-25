@@ -1,3 +1,11 @@
+## [1.4.53](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.52...v1.4.53) (2022-11-25)
+
+
+### Bug Fixes
+
+* bump dependencies ([f8d7763](https://github.com/CoCreate-app/CoCreate-pickr/commit/f8d776320047dbc95f83861a8f4b9ce0fd59fb2e))
+* CoCreate.crud.default removed bug causing default object ([3219cf8](https://github.com/CoCreate-app/CoCreate-pickr/commit/3219cf835bfe145d1db144bcea1040a859e34867))
+
 ## [1.4.52](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.51...v1.4.52) (2022-11-24)
 
 
