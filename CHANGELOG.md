@@ -1,3 +1,11 @@
+## [1.4.60](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.59...v1.4.60) (2022-12-04)
+
+
+### Bug Fixes
+
+* bump dependencies ([a5395bb](https://github.com/CoCreate-app/CoCreate-pickr/commit/a5395bbb121b9a127fe7fd20a3e10fe120db29a7))
+* getObjectValueByPath renamed to getValueFromObject ([64ea1be](https://github.com/CoCreate-app/CoCreate-pickr/commit/64ea1be86b775527d9038a5b369a951f7d7a83f0))
+
 ## [1.4.59](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.58...v1.4.59) (2022-12-02)
 
 
