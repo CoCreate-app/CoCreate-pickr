@@ -1,3 +1,10 @@
+## [1.4.68](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.67...v1.4.68) (2022-12-15)
+
+
+### Bug Fixes
+
+* add missing dev dependency style-loader ([6dfda9d](https://github.com/CoCreate-app/CoCreate-pickr/commit/6dfda9de6ad1b43f9edd27bd9823f355548da151))
+
 ## [1.4.67](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.66...v1.4.67) (2022-12-13)
 
 
