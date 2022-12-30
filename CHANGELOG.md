@@ -1,3 +1,10 @@
+## [1.4.77](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.76...v1.4.77) (2022-12-30)
+
+
+### Bug Fixes
+
+* update config sources to use template  braces with entry on src ([3f00de7](https://github.com/CoCreate-app/CoCreate-pickr/commit/3f00de768f518e8064c1b46c92f70093c885a197))
+
 ## [1.4.76](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.75...v1.4.76) (2022-12-29)
 
 
