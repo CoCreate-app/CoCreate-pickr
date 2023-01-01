@@ -1,3 +1,10 @@
+## [1.4.79](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.78...v1.4.79) (2023-01-01)
+
+
+### Bug Fixes
+
+* docs sanbox overflow ([d5fa8a1](https://github.com/CoCreate-app/CoCreate-pickr/commit/d5fa8a1fbc765242dfa94c945a5af86a257d5c52))
+
 ## [1.4.78](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.77...v1.4.78) (2022-12-31)
 
 
