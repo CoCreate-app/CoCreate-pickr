@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.90...v1.5.0) (2023-03-16)
+
+
+### Features
+
+* replaced get-value and set-value with a super charged version of CoCreate-events ([4d44548](https://github.com/CoCreate-app/CoCreate-pickr/commit/4d4454882ecde1170567eaeaa6c1a4a59a6b4277))
+
 ## [1.4.90](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.4.89...v1.4.90) (2023-02-01)
 
 
