@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.0...v1.6.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* removed uglifyjs-webpack-plugin ([67d8ed0](https://github.com/CoCreate-app/CoCreate-pickr/commit/67d8ed0051637f06e649710afa25b552137d9e0c))
+
 # [1.6.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.5.6...v1.6.0) (2023-04-24)
 
 
