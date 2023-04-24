@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.3...v1.6.4) (2023-04-24)
+
+
+### Bug Fixes
+
+* updated worrkflows to v3 and node version 16 ([a04c8c6](https://github.com/CoCreate-app/CoCreate-pickr/commit/a04c8c6b2683fb966a477c13a2dff3a2cd340f58))
+
 ## [1.6.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.2...v1.6.3) (2023-04-24)
 
 
