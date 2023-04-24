@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.5.6...v1.6.0) (2023-04-24)
+
+
+### Features
+
+* added pwa manifest ([8f15b43](https://github.com/CoCreate-app/CoCreate-pickr/commit/8f15b435930f656ec2aebbbfc0170122fe7f0cf6))
+
 ## [1.5.6](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.5.5...v1.5.6) (2023-04-11)
 
 
