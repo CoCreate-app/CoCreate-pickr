@@ -1,3 +1,12 @@
+## [1.6.5](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.4...v1.6.5) (2023-04-30)
+
+
+### Bug Fixes
+
+* fullscreen target updated to fullscreen fullscreen-target ([7d1068c](https://github.com/CoCreate-app/CoCreate-pickr/commit/7d1068c56bab364fa9ace6d43314ee5d6d066216))
+* package-lock.json and pnpm-lock.yaml added to .gitignore ([edd55f8](https://github.com/CoCreate-app/CoCreate-pickr/commit/edd55f8cf81aa7adde19575f81d58226e99f5917))
+* removed toogle fullscreen icons. now using css content ([fcb6a3f](https://github.com/CoCreate-app/CoCreate-pickr/commit/fcb6a3fec7a4eac7d76791720ea707eba658056b))
+
 ## [1.6.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.3...v1.6.4) (2023-04-24)
 
 
