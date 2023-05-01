@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.6...v1.6.7) (2023-05-01)
+
+
+### Bug Fixes
+
+* update manifest.json to manifest.webmanifest ([47ddd59](https://github.com/CoCreate-app/CoCreate-pickr/commit/47ddd595eb18ea80c99cfabefb00f4135d57d271))
+
 ## [1.6.6](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.5...v1.6.6) (2023-05-01)
 
 
