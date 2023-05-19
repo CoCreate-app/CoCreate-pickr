@@ -1,3 +1,11 @@
+## [1.6.9](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.8...v1.6.9) (2023-05-19)
+
+
+### Bug Fixes
+
+* apikey renamed to key ([f87349d](https://github.com/CoCreate-app/CoCreate-pickr/commit/f87349d21803701201d190c6640043d57aeed3e3))
+* update packages to latest version. This commit updates various packages in the dependencies section of the package.json file to their latest published versions, thereby fixing multiple bugs and improving overall performance. ([5a30def](https://github.com/CoCreate-app/CoCreate-pickr/commit/5a30def038da2be8d3fbcbd858a4bec98fc6c8f0))
+
 ## [1.6.8](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.7...v1.6.8) (2023-05-06)
 
 
