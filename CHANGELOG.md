@@ -1,3 +1,11 @@
+## [1.6.11](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.10...v1.6.11) (2023-06-02)
+
+
+### Bug Fixes
+
+* format demo html ([26cc8e6](https://github.com/CoCreate-app/CoCreate-pickr/commit/26cc8e6e44080b1d87e9b118275d380e36012fbf))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([90bab1b](https://github.com/CoCreate-app/CoCreate-pickr/commit/90bab1bdd1dc63c2602d1eda138bb24507198609))
+
 ## [1.6.10](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.9...v1.6.10) (2023-05-21)
 
 
