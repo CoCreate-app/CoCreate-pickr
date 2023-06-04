@@ -1,3 +1,11 @@
+## [1.6.13](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.12...v1.6.13) (2023-06-04)
+
+
+### Bug Fixes
+
+* replaced secert GITHUB_TOKEN with GITHUB ([63cfd44](https://github.com/CoCreate-app/CoCreate-pickr/commit/63cfd44dec8b417aaed43625af7b049cf8fdbd51))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([852c36f](https://github.com/CoCreate-app/CoCreate-pickr/commit/852c36f9c73aa334158898840a51bff97c7bed17))
+
 ## [1.6.12](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.11...v1.6.12) (2023-06-04)
 
 
