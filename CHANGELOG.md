@@ -1,3 +1,10 @@
+## [1.6.12](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.11...v1.6.12) (2023-06-04)
+
+
+### Bug Fixes
+
+* **semantic-release:** worklow error solved by running node version 14 ([47f96fc](https://github.com/CoCreate-app/CoCreate-pickr/commit/47f96fcdd3f19b5558ae8fd86763d317303ea24c))
+
 ## [1.6.11](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.10...v1.6.11) (2023-06-02)
 
 
