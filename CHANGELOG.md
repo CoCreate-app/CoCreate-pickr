@@ -1,3 +1,10 @@
+## [1.6.24](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.23...v1.6.24) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([e066994](https://github.com/CoCreate-app/CoCreate-pickr/commit/e066994ece727cb3193a246e49456467d596f1e7))
+
 ## [1.6.23](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.22...v1.6.23) (2023-06-11)
 
 
