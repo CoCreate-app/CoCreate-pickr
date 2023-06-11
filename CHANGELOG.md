@@ -1,3 +1,10 @@
+## [1.6.26](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.25...v1.6.26) (2023-06-11)
+
+
+### Bug Fixes
+
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([c2c68a5](https://github.com/CoCreate-app/CoCreate-pickr/commit/c2c68a5e09d94485a71e31b5a807b363b11b5a95))
+
 ## [1.6.25](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.24...v1.6.25) (2023-06-11)
 
 
