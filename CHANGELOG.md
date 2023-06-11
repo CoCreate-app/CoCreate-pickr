@@ -1,3 +1,10 @@
+## [1.6.19](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.18...v1.6.19) (2023-06-11)
+
+
+### Bug Fixes
+
+* @cocreate/cli moved to dependencies ([674cbc1](https://github.com/CoCreate-app/CoCreate-pickr/commit/674cbc19a58bf5a8f835a96a4160582b33af7eb0))
+
 ## [1.6.18](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.17...v1.6.18) (2023-06-11)
 
 
