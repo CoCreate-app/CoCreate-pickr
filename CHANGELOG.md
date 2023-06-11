@@ -1,3 +1,10 @@
+## [1.6.17](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.16...v1.6.17) (2023-06-11)
+
+
+### Bug Fixes
+
+* renamed hosts to host. the value can be a string or an array of strings ([f487a82](https://github.com/CoCreate-app/CoCreate-pickr/commit/f487a82891c4b1765f236e4d47023d381ba2bfbe))
+
 ## [1.6.16](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.15...v1.6.16) (2023-06-10)
 
 
