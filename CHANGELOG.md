@@ -1,3 +1,10 @@
+## [1.6.20](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.19...v1.6.20) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([4bd057f](https://github.com/CoCreate-app/CoCreate-pickr/commit/4bd057f9ac8965cd33130e472c5be77843b5ce36))
+
 ## [1.6.19](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.18...v1.6.19) (2023-06-11)
 
 
