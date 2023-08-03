@@ -59,7 +59,7 @@ observer.init({
     observe: ['addedNodes'],
     target: '.color-picker',
     callback: (mutation) => {
-      createPickr(mutation.target);
+        createPickr(mutation.target);
     },
 });
 
@@ -71,15 +71,15 @@ function init() {
     }
 }
 
-crud.listen('updateDocument', function(data) {
-    const {collection, document_id, data: responseData} = data;
-    let pickrs = document.querySelectorAll(`.pickr[collection="${collection}"][document_id="${document_id}"]`);
+crud.listen('update.object', function (data) {
+    const { array, object, data: responseData } = data;
+    let pickrs = document.querySelectorAll(`.pickr[array="${array}"][object="${object}"]`);
     for (let pickr of pickrs) {
         const name = pickr.getAttribute('name');
         if (responseData[name]) {
             CoCreatePickr.refs.get(pickr).setColor(responseData[name]);
         }
-        
+
     }
 });
 
@@ -88,13 +88,13 @@ async function createPickr(p) {
     // pick attributes
     let attributes = p.attributes;
 
-	    let resp = await crud.read(p);
-	    if (resp) {
-	        let name = p.getAttribute('name');
-	        if (name && resp.document[name]) {
-        	    config.default = crud.getValueFromObject(resp.document, name);
-	        }
-	    }
+    let resp = await crud.read(p);
+    if (resp) {
+        let name = p.getAttribute('name');
+        if (name && resp.object[name]) {
+            config.default = crud.getValueFromObject(resp.object, name);
+        }
+    }
 
     // set element
     let disabledEvent;
@@ -140,9 +140,9 @@ async function createPickr(p) {
 
     //set events
     pickr.on('change', (instance, e, pickr) => {
-            pickr.setColor(instance.toHEXA().toString());
+        pickr.setColor(instance.toHEXA().toString());
     });
-    
+
     pickr.on('changestop', (source, instance) => {
         save(instance);
         dispatchEvents(instance);
@@ -152,12 +152,12 @@ async function createPickr(p) {
         save(instance);
         dispatchEvents(instance);
     });
-    
-    function save(instance){
-    	crud.save(element, instance.getColor().toHEXA().toString());
+
+    function save(instance) {
+        crud.save(element, instance.getColor().toHEXA().toString());
     }
-    
-    function dispatchEvents(instance){
+
+    function dispatchEvents(instance) {
         if (instance && !disabledEvent) {
             let event = new CustomEvent("input", {
                 bubbles: true,
@@ -169,7 +169,7 @@ async function createPickr(p) {
         }
     }
 
-    
+
 }
 
 init();

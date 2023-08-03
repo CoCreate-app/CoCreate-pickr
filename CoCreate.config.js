@@ -4,8 +4,8 @@ module.exports = {
     "host": "",
     "sources": [
         {
-            "collection": "files",
-            "document": {
+            "array": "files",
+            "object": {
                 "_id": "60298d60e979fb17407e25bd",
                 "name": "index.html",
                 "path": "/docs/pickr/index.html",
