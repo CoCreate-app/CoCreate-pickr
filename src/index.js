@@ -1,7 +1,6 @@
 /*globals CustomEvent*/
 import Pickr from '@simonwep/pickr';
 import observer from '@cocreate/observer';
-import crud from '@cocreate/crud-client';
 import '@simonwep/pickr/dist/themes/monolith.min.css';
 
 let config = {
@@ -71,30 +70,10 @@ function init() {
     }
 }
 
-crud.listen('update.object', function (data) {
-    const { array, object, data: responseData } = data;
-    let pickrs = document.querySelectorAll(`.pickr[array="${array}"][object="${object}"]`);
-    for (let pickr of pickrs) {
-        const name = pickr.getAttribute('name');
-        if (responseData[name]) {
-            CoCreatePickr.refs.get(pickr).setColor(responseData[name]);
-        }
-
-    }
-});
-
 async function createPickr(p) {
 
     // pick attributes
     let attributes = p.attributes;
-
-    let resp = await crud.read(p);
-    if (resp) {
-        let name = p.getAttribute('name');
-        if (name && resp.object[name]) {
-            config.default = crud.getValueFromObject(resp.object, name);
-        }
-    }
 
     // set element
     let disabledEvent;
@@ -144,18 +123,14 @@ async function createPickr(p) {
     });
 
     pickr.on('changestop', (source, instance) => {
-        save(instance);
+        instance.save();
         dispatchEvents(instance);
     });
 
     pickr.on('swatchselect', (source, instance) => {
-        save(instance);
+        instance.save();
         dispatchEvents(instance);
     });
-
-    function save(instance) {
-        crud.save(element, instance.getColor().toHEXA().toString());
-    }
 
     function dispatchEvents(instance) {
         if (instance && !disabledEvent) {
