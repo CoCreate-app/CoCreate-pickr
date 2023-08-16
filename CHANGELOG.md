@@ -1,3 +1,18 @@
+# [1.7.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.28...v1.7.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([de1e002](https://github.com/CoCreate-app/CoCreate-pickr/commit/de1e00245c06139ec3e82b87d28c78709364cdf1))
+* removed @cocreate/crud ([d6c1106](https://github.com/CoCreate-app/CoCreate-pickr/commit/d6c1106d9538ce43731d30af91cdcc1f29ccf9d7))
+* replace -target -selector ([545a394](https://github.com/CoCreate-app/CoCreate-pickr/commit/545a394bbaae69aa1bfc2f21c9f16fa5414e6206))
+* webpack.config and package.json make use of mode=production instead of process.env ([a20dd32](https://github.com/CoCreate-app/CoCreate-pickr/commit/a20dd32b6c2f50ff688c08d8faeddfadc29fda94))
+
+
+### Features
+
+* name attribute and variable renamed to key ([4e5eeeb](https://github.com/CoCreate-app/CoCreate-pickr/commit/4e5eeeb5f2b65eae6f2565cbd0e1d15a8e62bb11))
+
 ## [1.6.28](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.6.27...v1.6.28) (2023-06-14)
 
 
