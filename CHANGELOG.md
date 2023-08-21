@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.8.0...v1.8.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([7ed7d2b](https://github.com/CoCreate-app/CoCreate-pickr/commit/7ed7d2b0191f3358199b05124d0260b7d743a31e))
+* replace cdn with /dist ([22e2027](https://github.com/CoCreate-app/CoCreate-pickr/commit/22e20275bf73f8d0fe40fc8860e05afaedbfe31d))
+* update file uploader ([697cd18](https://github.com/CoCreate-app/CoCreate-pickr/commit/697cd1850cf9faff3f17f4a6dfdc6051b92188d6))
+
 # [1.8.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.7.0...v1.8.0) (2023-08-17)
 
 
