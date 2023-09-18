@@ -1,3 +1,11 @@
+## [1.9.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.1...v1.9.2) (2023-09-18)
+
+
+### Bug Fixes
+
+*  Add path and pathname ([8d600fc](https://github.com/CoCreate-app/CoCreate-pickr/commit/8d600fcc1f1aa3fbd8a885facf4314bc259ef9d8))
+* Update CoCreate depndencies to latest versions ([4a9493d](https://github.com/CoCreate-app/CoCreate-pickr/commit/4a9493d3b8e797a3eae8b703d8b13060af6780c9))
+
 ## [1.9.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.0...v1.9.1) (2023-08-21)
 
 
