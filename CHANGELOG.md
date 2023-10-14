@@ -1,3 +1,10 @@
+## [1.9.5](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.4...v1.9.5) (2023-10-14)
+
+
+### Bug Fixes
+
+* bump dependencies ([cbeeb55](https://github.com/CoCreate-app/CoCreate-pickr/commit/cbeeb5525cb329b56c93d4f5e42902a4dc0d1ed2))
+
 ## [1.9.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.3...v1.9.4) (2023-10-09)
 
 
