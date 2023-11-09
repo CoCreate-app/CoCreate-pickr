@@ -1,3 +1,11 @@
+## [1.9.8](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.7...v1.9.8) (2023-11-09)
+
+
+### Bug Fixes
+
+* meta name typo ([b9a1472](https://github.com/CoCreate-app/CoCreate-pickr/commit/b9a14725f1dbca88dfcdd6c5f88510781ad7e794))
+* update host ([97cdb5a](https://github.com/CoCreate-app/CoCreate-pickr/commit/97cdb5a82d45df315e0c70ef643b6184403dc320))
+
 ## [1.9.7](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.6...v1.9.7) (2023-11-03)
 
 
