@@ -1,3 +1,15 @@
+# [1.11.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.10.0...v1.11.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* update nav, edit button and css path ([fe63cd2](https://github.com/CoCreate-app/CoCreate-pickr/commit/fe63cd2f45db430d145076366c0cc39b6f18b500))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([83b6131](https://github.com/CoCreate-app/CoCreate-pickr/commit/83b61311c80580af2eeb5575137b7921cffb11c4))
+
 # [1.10.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.9.9...v1.10.0) (2023-11-19)
 
 
