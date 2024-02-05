@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.12.0...v1.12.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* Removed https://cdn.cocreate.app/latest/CoCreate.min.css ([e3ff8ec](https://github.com/CoCreate-app/CoCreate-pickr/commit/e3ff8ecf86995857250ca839edf2c8f9a30c53a4))
+
 # [1.12.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.11.0...v1.12.0) (2023-11-25)
 
 
