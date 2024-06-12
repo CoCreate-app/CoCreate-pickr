@@ -1,3 +1,11 @@
+## [1.12.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.12.2...v1.12.3) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump cocreate dependencies ([416c085](https://github.com/CoCreate-app/CoCreate-pickr/commit/416c085081586a1bf231d3d6e2be1902cf4d23ce))
+* svg icon class ([2109af1](https://github.com/CoCreate-app/CoCreate-pickr/commit/2109af14923172ef5d6083b6bfbfd8e61e2f4cef))
+
 ## [1.12.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.12.1...v1.12.2) (2024-04-29)
 
 
