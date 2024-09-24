@@ -123,12 +123,14 @@ async function createPickr(p) {
     });
 
     pickr.on('changestop', (source, instance) => {
-        instance.save();
+        if (instance.save)
+            instance.save();
         dispatchEvents(instance);
     });
 
     pickr.on('swatchselect', (source, instance) => {
-        instance.save();
+        if (instance.save)
+            instance.save();
         dispatchEvents(instance);
     });
 
