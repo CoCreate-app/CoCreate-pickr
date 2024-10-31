@@ -56,7 +56,7 @@ let refs = new Map();
 observer.init({
     name: "pickr",
     observe: ['addedNodes'],
-    target: '.color-picker',
+    selector: '.color-picker',
     callback: (mutation) => {
         createPickr(mutation.target);
     },
