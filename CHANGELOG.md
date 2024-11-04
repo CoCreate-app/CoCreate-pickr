@@ -1,3 +1,18 @@
+# [1.13.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.12.3...v1.13.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* check element for crud functions prior to execution ([acecd5c](https://github.com/CoCreate-app/CoCreate-pickr/commit/acecd5c0537f034f2c901b35092350234206ad41))
+* observer taget has been renamed to selector ([31b15ad](https://github.com/CoCreate-app/CoCreate-pickr/commit/31b15ad6ab81dd1e8bb1af5d3f4dc8157b170cc8))
+* pretier.config.js and file formating ([e8a12f3](https://github.com/CoCreate-app/CoCreate-pickr/commit/e8a12f3ee964f2600eb0a65914589c47e5aa94f7))
+
+
+### Features
+
+* add prettier.config.js and format files ([e7b94d9](https://github.com/CoCreate-app/CoCreate-pickr/commit/e7b94d93fec079fd4a94d01708553bf593216a53))
+* add prettier.config.js and format files ([86c5494](https://github.com/CoCreate-app/CoCreate-pickr/commit/86c549411499aa9b505ac59f2b61c54a05cafa5b))
+
 ## [1.12.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.12.2...v1.12.3) (2024-06-12)
 
 
