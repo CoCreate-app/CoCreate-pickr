@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.13.0...v1.13.1) (2025-04-11)
+
+
+### Bug Fixes
+
+* update observer observe param to type and and attributeName to attributeFilter ([1f5b35d](https://github.com/CoCreate-app/CoCreate-pickr/commit/1f5b35da595a399ba44ee4a9226d6ecf59e7a4e5))
+
 # [1.13.0](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.12.3...v1.13.0) (2024-11-04)
 
 
