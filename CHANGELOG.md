@@ -1,3 +1,13 @@
+## [1.13.2](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.13.1...v1.13.2) (2025-04-30)
+
+
+### Bug Fixes
+
+* added css-loader ([fa3ebb7](https://github.com/CoCreate-app/CoCreate-pickr/commit/fa3ebb7f49ca2c383878b9491d35266dbf980a7b))
+* update query attributes ([e712316](https://github.com/CoCreate-app/CoCreate-pickr/commit/e71231684366a9a6561fc2ba59a54a795c119df6))
+* updated cocreate modules versions ([55ee02a](https://github.com/CoCreate-app/CoCreate-pickr/commit/55ee02a230c2d47159596f398ef12fe372d91f5b))
+* webpack.config and devdependencies ([f7788bc](https://github.com/CoCreate-app/CoCreate-pickr/commit/f7788bc1315692f4c6129e3ed4c2cdf46f0d2fd8))
+
 ## [1.13.1](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.13.0...v1.13.1) (2025-04-11)
 
 
