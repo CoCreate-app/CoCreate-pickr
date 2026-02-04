@@ -1,3 +1,10 @@
+## [1.13.4](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.13.3...v1.13.4) (2026-02-04)
+
+
+### Bug Fixes
+
+* update worklow ([c59d8c8](https://github.com/CoCreate-app/CoCreate-pickr/commit/c59d8c88cf0e2bf41177dfe4d6a7162496379a9f))
+
 ## [1.13.3](https://github.com/CoCreate-app/CoCreate-pickr/compare/v1.13.2...v1.13.3) (2025-05-01)
 
 
